@@ -9,10 +9,10 @@ public class Server extends RemoteImp {
             IRemote stub = (IRemote) UnicastRemoteObject.exportObject(obj, 0);  
             Registry registry = LocateRegistry.getRegistry(); 
             registry.bind("bank-rmi", stub);  
-            System.err.println("Server ready"); 
+            System.out.println("Server ready"); 
         } catch (Exception e) { 
             System.err.println("Exception: " + e.toString()); 
             e.printStackTrace(); 
-        } 
+        }
     } 
 }  
